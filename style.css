@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #181d31;
+  color: #476a63;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2.1fr;
+  grid-template-rows: 1fr 12fr 7fr ;
+  grid-template-areas:
+    'navbar navbar'
+    'jumbopict jumbopict'
+    'feature feature'
+    'footer footer';
+}
+
+nav {
+  grid-area: navbar;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  font-family: 'Libre Baskerville', serif;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 50%;
+  margin-right: 5%;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul a:hover {
+  text-decoration: underline;
+}
+
+.jumbopict {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'mainex';
+  grid-area: jumbopict;
+  padding: 3rem;
+}
+.jumbopict .mainex {
+  grid-area: mainex;
+  background-color: rgba(240, 233, 210, 0.7);
+  position: relative;
+  background-image: url('stationary.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    'kontak . sosialmedia'
+    '. isi .'
+    '. searchbox .';
+}
+.jumbopict .mainex .isi {
+  background-color: rgba(24, 29, 49, 0.5);
+  grid-area: isi;
+  text-align: center;
+  color: antiquewhite;
+  border-radius: 0.2rem;
+  font-family: 'Libre Baskerville', serif;
+}
+.searchbar {
+  background-color: rgba(24, 29, 49, 0.5);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 60px;
+}
+
+.jumbopict .mainex .searchbox {
+  text-align: center;
+  grid-area: searchbox;
+  margin-top: 2rem;
+}
+.mainex img {
+  width: 3rem;
+}
+.kontak {
+  grid-area: kontak;
+  display: flex;
+  flex-direction: column;
+}
+
+.kontak .sosmed a {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sosialmedia {
+  grid-area: sosialmedia;
+}
+
+.isi {
+  grid-area: isi;
+}
+
+.tombol {
+  grid-area: tombol;
+}
+
+.feature {
+  grid-area: feature;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 0.6fr;
+  grid-template-areas:
+    '. pelayanan .'
+    '. subfeature .';
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.pelayanan {
+  grid-area: pelayanan;
+}
+
+.feature .subfeature img {
+  width: 25rem;
+  border-radius: 0.2rem;
+}
+
+.feature .subfeature img:hover {
+  transform: scale(1.05, 1.05);
+  transition: 0.3s;
+}
+.feature .subfeature {
+  grid-area: subfeature;
+  width: 80rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-rows: 1fr 0.4fr;
+  grid-template-areas: 
+  'isiFooter'
+  'akhirfooter';
+
+}
+
+.isiFooter{
+    grid-area: isiFooter;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'hubungikami tentangkami layanan socialmedia' ;
+    text-align:left;
+    padding: 15px;
+}
+
+.hubungikami{
+    grid-area: hubungikami;
+}
+
+.tentangkami{
+    grid-area: tentangkami;
+}
+.layanan{
+    grid-area: layanan;
+}
+.socialmedia{
+    grid-area: socialmedia;
+}
+
+.socialmedia img{
+    width: 30px;
+}
+
+.akhirfooter{
+    grid-area: akhirfooter;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: white;
+    
+}
